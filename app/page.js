@@ -1,11 +1,9 @@
 export default function Home() {
-  let name = "lee";
+  let name = "ddooo00";
   return (
     <div>
-      <div>
-        <h4 style={{ textAlign: "center", marginTop: "150px" }}>애플후레시</h4>
-        <p style={{ textAlign: "center" }}> by dooo00</p>
-      </div>
+      <h4 style={{ textAlign: "center", marginTop: "150px" }}>애플후레시</h4>
+      <p style={{ textAlign: "center" }}> by {name}</p>
     </div>
   );
 }

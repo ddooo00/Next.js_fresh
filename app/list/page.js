@@ -1,8 +1,14 @@
+"use client";
+
+import { useState } from "react";
+
 // import Image from "next/image";
 // import 작명 from "../../public/food0.png";
 
 export default function List() {
   let 상품 = ["Tomatoes", "Pasta", "Coconut"];
+  let [수량, set수량] = useState(0);
+
   return (
     <div>
       <h4 style={{ textAlign: "center", marginTop: "150px" }}>상품 목록</h4>
@@ -15,6 +21,21 @@ export default function List() {
             {/* <img src={"/food" + i + ".png"} className="food-img" /> */}
             <h4>{a} $40</h4>
             {/* <h4>{상품[i]}</h4> */}
+            <span>{수량}</span>
+            <button
+              onClick={() => {
+                set수량(수량 - 1);
+              }}
+            >
+              -
+            </button>
+            <button
+              onClick={() => {
+                set수량(수량 + 1);
+              }}
+            >
+              +
+            </button>
           </div>
         );
       })}
